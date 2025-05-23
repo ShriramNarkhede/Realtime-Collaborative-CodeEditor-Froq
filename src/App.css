@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+:root {
+    /* Main Brand Colors */
+    --primary: #6366f1;        /* Indigo - Trust & Innovation */
+    --primary-dark: #4f46e5;   /* Darker indigo for hovers */
+    --primary-light: #a5b4fc;  /* Light indigo for backgrounds */
+
+    /* Secondary Colors */
+    --secondary: #10b981;      /* Emerald - Success & Activity */
+    --accent: #f59e0b;         /* Amber - Notifications & Warnings */
+    --danger: #ef4444;         /* Red - Errors & Alerts */
+
+    /* Neutral Colors (Dark Theme) */
+    --background: #0f172a;     /* Slate-900 - Main background */
+    --surface: #1e293b;        /* Slate-800 - Cards & panels */
+    --surface-light: #334155;  /* Slate-700 - Hover states */
+    --border: #475569;         /* Slate-600 - Borders */
+
+    /* Text Colors */
+    --text-primary: #f8fafc;   /* Slate-50 - Primary text */
+    --text-secondary: #cbd5e1; /* Slate-300 - Secondary text */
+    --text-muted: #94a3b8;     /* Slate-400 - Muted text */
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.homePageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 100vh;
+}
+
+.formWrapper {
+    background: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    color: var(--create-hover-color);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainLabel {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.homePageLogo {
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.inputBox {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 14px;
+    background: #eee;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.copyBtn {
+    background-color: var(--copy-color);
+    color: white;
+}
+
+.copyBtn:hover {
+    background-color: var(--create-color);
+    color: var(--copy-text);
+}
+
+.joinBtn {
+    background: var(--primary);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    padding: 0.85rem 0;
+    border: none;
+    margin-top: 0.5rem;
+    width: 100%;
+    box-shadow: 0 2px 8px 0 rgba(99, 102, 241, 0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.5px;
+}
+.joinBtn:hover, .joinBtn:focus {
+    background: var(--primary-dark);
+    color: var(--text-primary);
+    box-shadow: 0 4px 16px 0 rgba(99, 102, 241, 0.18);
+}
+
+.leaveBtn {
+    background: var(--leave-color);
+    font-weight: bold;
+    color: white;
+}
+
+.leaveBtn:hover {
+    background: var(--leave-color);
+    color: var(--copy-text);
+    transition: all 0.2s ease-in-out;
+}
+
+.createInfo {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.createNewBtn {
+    color: #40be70;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500 !important;
+}
+
+.createNewBtn:hover {
+    color: #4aed88;
+    border-color: #4aed88;
+}
+
+footer a:hover {
+    color: var(--create-color);
+}
+
+.mainWrap {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 100vh;
+}
+
+@media screen and (min-width: 480px) {
+    .mainWrap {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        height: 100vh;
+    }
+}
+
+.aside {
+    background: var(--surface);
+    padding: 24px 20px;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border-right: 1.5px solid var(--border);
+    box-shadow: 2px 0 16px 0 rgba(31, 38, 135, 0.07);
+}
+
+.asideInner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 12px 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logoImage {
+    height: 150px;
+    width: auto;
+}
+
+/* Connected Section */
+.aside h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.clientsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 0;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    background: var(--surface-light);
+    color: var(--text-primary);
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    border: 2px solid var(--border);
+    transition: all 0.2s ease;
+    /* Removed box-shadow to eliminate blue shadow */
+}
+
+.client:hover {
+    background: var(--primary-light);
+    color: var(--background);
+    transform: translateY(-2px);
+}
+
+.userName {
+    margin-top: 4px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 48px;
+    line-height: 1.2;
+}
+
+/* Form Labels and Selects */
+.aside label {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+
+.seLang {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    background: var(--surface-light);
+    color: var(--text-primary);
+    padding: 12px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.seLang:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-color: var(--primary);
+}
+
+.seLang:hover {
+    background: var(--background);
+    border-color: var(--primary-light);
+}
+
+/* Buttons */
+.copyBtn {
+    background: var(--primary);
+    color: var(--text-primary);
+    margin-top: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.copyBtn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px 0 rgba(99, 102, 241, 0.25);
+}
+
+.copyBtn:focus {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+.leaveBtn {
+    background: var(--danger);
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-top: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.leaveBtn:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px 0 rgba(239, 68, 68, 0.25);
+}
+
+.leaveBtn:focus {
+    outline: 2px solid #fca5a5;
+    outline-offset: 2px;
+}
+
+/* CodeMirror Editor */
+.CodeMirror {
+    font-family: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace !important;
+    min-height: calc(100vh - 20px);
+    width: calc(100vw - 200px);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 480px) {
+    .CodeMirror {
+        min-height: calc(100vh - 20px);
+        width: calc(100vw - 280px);
+        font-size: 16px;
+        line-height: 1.6;
+        padding-top: 20px;
+    }
+}
+
+/* Additional responsive improvements */
+@media screen and (max-width: 768px) {
+    .mainWrap {
+        grid-template-columns: 160px 1fr;
+    }
+    
+    .aside {
+        padding: 16px 12px;
+    }
+    
+    .logoImage {
+        height: 48px;
+    }
+    
+    .aside h3 {
+        font-size: 1rem;
+    }
+    
+    .client {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .userName {
+        font-size: 0.7rem;
+        max-width: 40px;
+    }
+    
+    .seLang, .copyBtn, .leaveBtn {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    
+    .CodeMirror {
+        width: calc(100vw - 160px);
+        font-size: 14px;
+    }
+}
